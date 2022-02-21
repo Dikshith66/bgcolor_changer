@@ -39,25 +39,21 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('Backgroundcolorchanger'),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Center(
-                child: SizedBox(
-              height: 50,
-              width: 80,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
-                onPressed: ChangeColor,
-                child: Text('change it!'),
+        body: Center(
+            child: SizedBox(
+          height: 40,
+          width: 80,
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: colornames[index],
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(24),
               ),
-            ))
-          ],
-        ),
+            ),
+            onPressed: ChangeColor,
+            child: Text('change it!'),
+          ),
+        )),
       ),
     );
   }
